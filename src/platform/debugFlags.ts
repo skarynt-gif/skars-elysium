@@ -21,7 +21,7 @@ export function parseDebugFlags(search: string, isDev: boolean): DebugFlags {
   const off = (name: string) => params.get(name) === 'off';
   return {
     debug: isDev || params.has('debug'),
-    retro: !off('retro'),
+    retro: params.get('retro') === 'on',
     wobble: !off('wobble'),
     dither: !off('dither'),
     skipIntro: params.has('skipintro'),
