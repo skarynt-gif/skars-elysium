@@ -39,7 +39,11 @@ export function Instanced({
   }, [geometry, material, items]);
 
   // Geometry and material are shared, so only the per-instance data is freed.
-  useEffect(() => () => mesh.dispose(), [mesh]);
+useEffect(() => {
+  return () => {
+    mesh.dispose();
+  };
+}, [mesh]);
 
   return <primitive object={mesh} />;
 }
