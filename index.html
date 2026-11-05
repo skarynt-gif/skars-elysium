@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- viewport-fit=cover lets the game use the full iPhone screen; safe areas are handled in CSS -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#1a0f2e" />
+    <meta name="description" content="Skar’s Elysium: explore a sunset garden where every flower is a song." />
+    <title>Skar’s Elysium</title>
+    <!-- Pixel font, self-hosted (SIL Open Font License, see /fonts/PressStart2P-OFL.txt). -->
+    <link rel="preload" href="/fonts/PressStart2P-Regular.woff" as="font" type="font/woff" crossorigin />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <!-- Link previews (iMessage, Instagram, X, Discord...) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Skar’s Elysium" />
+    <meta property="og:description" content="Walk a sunset garden where every flower is a song." />
+    <meta property="og:image" content="%VITE_SITE_URL%/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>This garden needs JavaScript to grow.</noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

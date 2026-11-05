@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "_note": "DEMO DATA. Songs in media/ are synthesized placeholders. Replace every collection and song with your real releases. Media paths are relative to this file. Run `npm run validate-content` after editing.",
+  "collections": [
+    {
+      "id": "demo-velvet-hours",
+      "title": "Velvet Hours (Demo Album)",
+      "type": "album",
+      "area": "main",
+      "cover": "media/covers/velvet-hours.webp",
+      "description": "Placeholder R&B album bed."
+    },
+    {
+      "id": "demo-prism-garden",
+      "title": "Prism Garden (Demo EP)",
+      "type": "ep",
+      "area": "main",
+      "cover": "media/covers/prism-garden.webp",
+      "description": "Placeholder psychedelic EP bed."
+    },
+    {
+      "id": "demo-singles",
+      "title": "Singles",
+      "type": "single",
+      "area": "main"
+    },
+    {
+      "id": "demo-next-ep",
+      "title": "Golden Hour (Upcoming Demo EP)",
+      "type": "ep",
+      "area": "ep-garden",
+      "autoBloom": true,
+      "description": "Placeholder upcoming EP for the EP Garden."
+    },
+    {
+      "id": "demo-vault",
+      "title": "The Vault",
+      "type": "vault",
+      "area": "hidden"
+    }
+  ],
+  "songs": [
+    { "id": "demo-slow-burn", "title": "Slow Burn", "artist": "Skar", "collectionId": "demo-velvet-hours", "genre": "rnb", "status": "released", "audio": "media/audio/slow-burn.mp3" },
+    { "id": "demo-honey-static", "title": "Honey Static", "artist": "Skar", "collectionId": "demo-velvet-hours", "genre": "rnb", "status": "released", "audio": "media/audio/honey-static.mp3" },
+    { "id": "demo-afterglow", "title": "Afterglow", "artist": "Skar", "collectionId": "demo-velvet-hours", "genre": "rnb", "status": "released", "audio": "media/audio/afterglow.mp3" },
+    { "id": "demo-kaleidoscope", "title": "Kaleidoscope", "artist": "Skar", "collectionId": "demo-prism-garden", "genre": "psychedelic", "status": "released", "audio": "media/audio/kaleidoscope.mp3" },
+    { "id": "demo-floating", "title": "Floating", "artist": "Skar", "collectionId": "demo-prism-garden", "genre": "psychedelic", "status": "released", "audio": "media/audio/floating.mp3" },
+    { "id": "demo-moonwalk", "title": "Moonwalk", "artist": "Skar", "collectionId": "demo-singles", "genre": "melodic-rap", "status": "released", "audio": "media/audio/moonwalk.mp3" },
+    { "id": "demo-overdrive", "title": "Overdrive", "artist": "Skar", "collectionId": "demo-singles", "genre": "rage", "status": "released", "audio": "media/audio/overdrive.mp3" },
+    { "id": "demo-first-light", "title": "First Light", "artist": "Skar", "collectionId": "demo-next-ep", "genre": "melodic-rap", "status": "upcoming", "releaseDate": "2026-12-04", "preview": "media/previews/first-light.mp3" },
+    { "id": "demo-sun-dial", "title": "Sun Dial", "artist": "Skar", "collectionId": "demo-next-ep", "genre": "rnb", "status": "upcoming", "releaseDate": "2026-12-04" },
+    { "id": "demo-secret-track", "title": "Secret Track", "artist": "Skar", "collectionId": "demo-next-ep", "genre": "psychedelic", "status": "upcoming", "releaseDate": "2026-12-04", "teaser": true },
+    { "id": "demo-lost-tape", "title": "Lost Tape", "artist": "Skar", "collectionId": "demo-vault", "genre": "rage", "status": "unreleased", "preview": "media/previews/lost-tape.mp3" }
+  ]
+}

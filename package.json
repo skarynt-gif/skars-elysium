@@ -1,0 +1,41 @@
+{
+  "name": "skars-elysium",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test \"src/**/*.test.ts\" \"functions/**/*.test.ts\" \"scripts/**/*.test.ts\" \"studio/**/*.test.ts\"",
+    "validate-content": "node scripts/validate-content.ts public/content/manifest.json",
+    "publish-media": "node scripts/publish-media.ts",
+    "build:studio": "tsc --noEmit && vite build --config studio/vite.config.ts && vite build --mode studio-preview --base /preview/ --outDir studio/dist/preview --emptyOutDir",
+    "studio:local": "npm run build:studio && cd studio && npx wrangler pages dev dist --d1 DB --r2 MEDIA=skars-elysium-media --port 8788",
+    "dev:studio": "vite --config studio/vite.config.ts"
+  },
+  "dependencies": {
+    "@react-three/drei": "^10.0.0",
+    "@react-three/fiber": "^9.1.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "three": "^0.178.0",
+    "zustand": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "@types/three": "^0.178.0",
+    "@vitejs/plugin-react": "^4.7.0",
+    "typescript": "~5.8.3",
+    "vite": "^7.0.0"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true
+  }
+}

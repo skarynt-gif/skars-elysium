@@ -1,0 +1,10 @@
+# Cloudflare Pages configuration (used by `wrangler pages dev` and deploys).
+# The MEDIA binding connects the R2 bucket that holds your songs, artwork and
+# manifest; functions/media/[[path]].ts serves it at /media/*.
+name = "skars-elysium"
+pages_build_output_dir = "./dist"
+compatibility_date = "2026-10-01"
+
+[[r2_buckets]]
+binding = "MEDIA"
+bucket_name = "skars-elysium-media"
