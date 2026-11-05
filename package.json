@@ -14,7 +14,7 @@
     "test": "node --test \"src/**/*.test.ts\" \"functions/**/*.test.ts\" \"scripts/**/*.test.ts\" \"studio/**/*.test.ts\"",
     "validate-content": "node scripts/validate-content.ts public/content/manifest.json",
     "publish-media": "node scripts/publish-media.ts",
-    "build:studio": "tsc --noEmit && vite build --config studio/vite.config.ts && vite build --mode studio-preview --base /preview/ --outDir studio/dist/preview --emptyOutDir",
+    "build:studio": "tsc --noEmit && vite build --config studio/vite.config.ts && vite build --mode studio-preview --base /preview/ --outDir studio/dist/preview --emptyOutDir && rm -rf dist && cp -R studio/dist ./dist",
     "studio:local": "npm run build:studio && cd studio && npx wrangler pages dev dist --d1 DB --r2 MEDIA=skars-elysium-media --port 8788",
     "dev:studio": "vite --config studio/vite.config.ts"
   },
