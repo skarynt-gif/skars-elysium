@@ -1,0 +1,12 @@
+name = "skars-elysium-studio"
+pages_build_output_dir = "./dist"
+compatibility_date = "2026-10-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "skars-elysium-studio"
+database_id = "1e886191-928f-4c2e-b2a9-10e8cb8ea78a"
+
+[[r2_buckets]]
+binding = "MEDIA"
+bucket_name = "skars-elysium-media"
